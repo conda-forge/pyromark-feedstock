@@ -1,5 +1,5 @@
 {% set name = "pyromark" %}
-{% set version = "0.5.1" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyromark-{{ version }}.tar.gz
-  sha256: 8204800c73c1886d9b5567f54d32964d60cd1704ff5e701c67aee8759671171e
+  sha256: bccc573d6a9a656da3131d842f5e2a3c913b71740e22f05774922ed81d48c2bd
 
 build:
   skip: true  # [py<37]
