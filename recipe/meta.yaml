@@ -12,7 +12,7 @@ source:
 build:
   skip: true  # [py<39]
   entry_points:
-    - pyromark = pyromark.__main__:main
+    - pyromark = pyromark.__main__:_main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
