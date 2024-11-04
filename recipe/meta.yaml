@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyromark-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyromark-{{ version }}.tar.gz
   sha256: bccc573d6a9a656da3131d842f5e2a3c913b71740e22f05774922ed81d48c2bd
 
 build:
-  skip: true  # [py<37]
+  skip: true  # [py<39]
   entry_points:
     - pyromark = pyromark.__main__:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -27,6 +27,7 @@ requirements:
     - pip
   run:
     - python
+    - typing_extensions >=3.7.4.2
 
 test:
   imports:
