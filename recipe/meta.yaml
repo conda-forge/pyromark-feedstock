@@ -1,5 +1,5 @@
 {% set name = "pyromark" %}
-{% set version = "0.9.3" %}
+{% set version = "0.9.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyromark-{{ version }}.tar.gz
-  sha256: 7ca2347df32acec702664069ed94c26f376313b681602e09c20047a555e35b4e
+  sha256: ba0168d3ed633083632106c6d29cce536745a021e4d5b1ba6fef26adba144a60
 
 build:
   skip: true  # [py<39]
@@ -16,7 +16,7 @@ build:
   script:
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   build:
