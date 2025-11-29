@@ -33,7 +33,7 @@ requirements:
     - pip
   run:
     - python
-    - typing_extensions >=3.7.4.2
+    - typing_extensions >=3.7.4
 
 tests:
   - python:
@@ -41,7 +41,6 @@ tests:
         - pyromark
       pip_check: true
   - script:
-      - pip check
       - pyromark --help
 
 about:
