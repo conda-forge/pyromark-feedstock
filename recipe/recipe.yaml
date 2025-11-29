@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pyromark
-  version: "0.9.7"
+  version: "0.9.8"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pyromark-${{ version }}.tar.gz
-  sha256: 8cd1ee1c89d497148b28e81d63b7a41db7893d2e5d0ee409628fadbbc80bf244
+  sha256: 80e00758ea5ebcc038614c0b818178466ae301f9b3c7ab88f59e68f345755d41
 
 build:
-  number: 1
+  number: 0
   script:
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -33,7 +33,7 @@ requirements:
     - pip
   run:
     - python
-    - typing_extensions >=3.7.4.2
+    - typing_extensions >=3.7.4
 
 tests:
   - python:
@@ -41,7 +41,6 @@ tests:
         - pyromark
       pip_check: true
   - script:
-      - pip check
       - pyromark --help
 
 about:
