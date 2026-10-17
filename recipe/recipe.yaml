@@ -33,7 +33,7 @@ requirements:
     - pip
   run:
     - python
-    - typing_extensions >=3.7.4
+    - typing_extensions >=4.4.0
 
 tests:
   - python:
