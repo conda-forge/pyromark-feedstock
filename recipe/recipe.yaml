@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pyromark
-  version: "0.10.2"
+  version: "0.10.3"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pyromark-${{ version }}.tar.gz
-  sha256: 67fe932bdd43fdc6f4b61a12559faccf2a83e28806702af53f45c69fceb435bc
+  sha256: 895c32955b138b41db51cc1544e931647d2c644512990b21f46c50078285f1d6
 
 build:
   number: 0
