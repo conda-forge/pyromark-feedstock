@@ -44,7 +44,7 @@ tests:
       - pyromark --help
 
 about:
-  summary: Blazingly fast CommonMark-compliant Markdown parser for Python, written in Rust
+  summary: Blazingly fast CommonMark-compliant Markdown pull parser for Python, written in Rust
   license: MIT
   license_file:
     - LICENSE
