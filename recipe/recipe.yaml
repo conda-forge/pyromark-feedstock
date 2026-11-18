@@ -13,7 +13,7 @@ source:
   sha256: 61aed01c2722e5481af42a093f5967618b89fff0882a465f8bf0225ccb3a0808
 
 build:
-  number: 0
+  number: 1
   script:
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -44,13 +44,13 @@ tests:
       - pyromark --help
 
 about:
-  summary: Blazingly fast Markdown parser for Python written in Rust.
+  summary: Blazingly fast CommonMark-compliant Markdown pull parser for Python, written in Rust
   license: MIT
   license_file:
     - LICENSE
     - THIRDPARTY.yml
   homepage: https://github.com/monosans/pyromark
-  documentation: https://pyromark.readthedocs.io/
+  documentation: https://monosans.github.io/pyromark/
 
 extra:
   recipe-maintainers:
